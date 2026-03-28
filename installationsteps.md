@@ -93,7 +93,7 @@ apt install unzip -y
 unzip sonarqube-9.9.3.79811.zip
 mv sonarqube-9.9.3.79811 sonarqube-9.9
 ```
-* Sonar will not be executed with `root` user
+* Sonar should not be executed with `root` user
 * We need to create a user called as `sonar` and start the applicaiton with that user 
 ```bash
 useradd sonar
@@ -105,6 +105,9 @@ chmod -R 775 /opt/sonarqube-9.9
 
 # Switch user to sonar
 su - sonar
+* when we switch the user it will throw the (su: warning: cannot change directory to /home/sonar: No such file or directory
+$ )
+* when you see above one type: `bash`
 cd /opt/sonarqube-9.9
 cd bin
 cd linux-x86-64/
