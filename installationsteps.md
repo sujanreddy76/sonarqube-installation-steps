@@ -8,7 +8,7 @@
 
 2. Extract the downloaded archive:
    ```bash
-   tar xvzf openjdk-17.0.2_linux-x64_bin.tar.gz
+   tar xvf openjdk-17.0.2_linux-x64_bin.tar.gz
    ```
 
 3. Move the extracted JDK to a more permanent location:
