@@ -118,6 +118,64 @@ sh sonar.sh start
 
 # To Verify status of sonarqube
 sh sonar.sh status
+
+#If you get issue like sonar not running please make below changes:
+Here’s your content neatly formatted as a **Markdown (.md) document** 👇
+
+````md
+# SonarQube Fix: Elasticsearch Crash (cgroup Issue)
+
+## 🛠️ Solution Steps
+
+### 1. Edit SonarQube Configuration File
+
+```bash
+vi /opt/sonarqube-9.9/conf/sonar.properties
+````
+
+### 2. Add the Following Lines at the End
+
+```properties
+sonar.search.javaOpts=-XX:-UseContainerSupport
+sonar.web.javaOpts=-XX:-UseContainerSupport
+sonar.ce.javaOpts=-XX:-UseContainerSupport
+```
+
+---
+
+## 🔁 Restart SonarQube
+
+```bash
+cd /opt/sonarqube-9.9/bin/linux-x86-64/
+
+sh sonar.sh stop
+sh sonar.sh start
+```
+
+---
+
+## ✅ Verify Status
+
+```bash
+sh sonar.sh status
+```
+
+Expected Output:
+
+```
+SonarQube is running
+```
+
+---
+
+## 📌 Notes
+
+* This fix resolves the **Elasticsearch crash issue** caused by Java cgroup incompatibility.
+* The JVM option `-XX:-UseContainerSupport` disables container resource detection, preventing startup failure.
+
+---
+
+
 ```
 * Once the installation is successful, sonarqube can be acessible at port `9000`
 * Make sure your firewalls are opened (if aws its security groups, if gcp its firewalls)
