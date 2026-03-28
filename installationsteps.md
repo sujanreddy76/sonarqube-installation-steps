@@ -46,7 +46,7 @@ To ensure that Java and Maven are available to all users, follow these steps:
    ```bash
    export JAVA_HOME=/opt/jdk-17
    export PATH=$PATH:$JAVA_HOME/bin
-   export M2_HOME=/opt/apache-maven-3.8.8
+   export M2_HOME=/opt/apache-maven-3.8.9
    export PATH=$PATH:$M2_HOME/bin
    ```
 
