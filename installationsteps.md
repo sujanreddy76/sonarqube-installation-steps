@@ -102,12 +102,15 @@ useradd sonar
 sonar           ALL=(ALL)       NOPASSWD: ALL
 chown -R sonar:sonar /opt/sonarqube-9.9
 chmod -R 775 /opt/sonarqube-9.9
-
+```
+```bash
 # Switch user to sonar
 su - sonar
+```
 * when we switch the user it will throw the (su: warning: cannot change directory to /home/sonar: No such file or directory
 $ )
 * when you see above one type: `bash`
+```bash
 cd /opt/sonarqube-9.9
 cd bin
 cd linux-x86-64/
