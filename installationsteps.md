@@ -19,9 +19,9 @@
 
 ---
 
-## 2. Install Maven 3.8.8
+## 2. Install Maven 3.8.9
 
-1. Download Maven 3.8.8:
+1. Download Maven 3.8.9:
    ```bash
    cd /opt
    wget https://dlcdn.apache.org/maven/maven-3/3.8.9/binaries/apache-maven-3.8.9-bin.tar.gz
@@ -78,8 +78,8 @@ To ensure that Java and Maven are available to all users, follow these steps:
 
    - You should see output similar to:
    ```
-   Apache Maven 3.8.8
-   Maven home: /opt/apache-maven-3.8.8
+   Apache Maven 3.8.9
+   Maven home: /opt/apache-maven-3.8.9
    Java version: 17.0.2, vendor: Oracle Corporation, runtime: /opt/jdk-17
    ```
 
